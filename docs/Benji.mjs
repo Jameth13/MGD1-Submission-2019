@@ -24,7 +24,6 @@ contextUI.webkitImageSmoothingEnabled = false;
 contextUI.msImageSmoothingEnabled = false;
 contextUI.imageSmoothingEnabled = false;
 
-
 //Constants & global variables
 const WORLD_SCALE = new Vector2(4, 4);
 const CANVAS_SIZE = new Vector2(canvas.width, canvas.height);
