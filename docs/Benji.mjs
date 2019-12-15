@@ -280,7 +280,7 @@ class Character {
         this.speed = new Vector2(180, 180);
         this.scale = WORLD_SCALE;
         this.sprite = charSprites;
-        this.lastDir = new Vector2(1, 0);
+        this.lastDir = new Vector2(0, -1);
         this.collider = new RectCollider(Vector2.Add(this.pos, new Vector2(4, 4)), new Vector2(56, 56), Physics.SIMULATED, "Player");
         //Collectables
         this.keys = [false, false, false];
@@ -307,6 +307,7 @@ class Character {
             this.pos.Add(Vector2.Mult(v, speedDelta));
             this.collider.Update(new Vector2(this.pos.x + 4, this.pos.y + 4));
 
+            //Update sprite
             if (this.lastDir.x === 0 && this.lastDir.y === 1)
                 this.sprite.frame = 0;
             if (this.lastDir.x === 0.7071067811865475 && this.lastDir.y === 0.7071067811865475)
@@ -923,7 +924,6 @@ class Screen {
 }
 
 //Clone object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-//Object constructor: https://eslint.org/docs/rules/no-new-object
 const PlanSprites = function(v) {
     if (v === 0)
         return null;

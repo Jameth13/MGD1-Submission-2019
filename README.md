@@ -1,2 +1,3 @@
-# MGD1-Submission-2019
- 
+# Coursework Submission for MGD1
+
+James Paton (S1111175) 
