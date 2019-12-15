@@ -431,7 +431,7 @@ class Character {
             this.immune = false;
         };
         this.InitColliders = function() {
-            this.collider = new RectCollider(Vector2.Add(this.pos, new Vector2(4, 4)), new Vector2(56, 56), Physics.SIMULATED, "Player");
+            this.collider = new RectCollider(Vector2.Add(this.pos, new Vector2(6, 6)), new Vector2(52, 52), Physics.SIMULATED, "Player");
             this.swordCollider = new RectCollider(this.pos, Vector2.Mult(new Vector2(this.sprite.img[0].width, this.sprite.img[0].height), this.scale), Physics.TRIGGER, "Sword");
         };
     }
